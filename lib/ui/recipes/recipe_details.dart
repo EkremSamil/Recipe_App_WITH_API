@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import '../colors.dart';
+import '../../core/colors.dart';
 
 class RecipeDetails extends StatelessWidget {
   const RecipeDetails({Key? key}) : super(key: key);

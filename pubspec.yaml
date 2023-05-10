@@ -19,7 +19,12 @@ dependencies:
   flutter_svg: 
   shared_preferences:
   http:
-
+  provider: 
+  equatable: 
+  chopper: 
+  logging: 
+  chopper_generator:
+   
 dev_dependencies:
   flutter_test:
     sdk: flutter
