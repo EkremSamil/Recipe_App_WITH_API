@@ -19,3 +19,6 @@ export 'package:recipes/ui/recipes/recipe_details.dart';
 export 'package:recipes/ui/widgets/custom_dropdown.dart';
 export 'package:recipes/ui/widgets/recipe_card.dart';
 export 'package:recipes/network/model_converter.dart';
+export 'package:recipes/data/models/ingredient.dart';
+export 'package:recipes/data/repository.dart';
+export 'package:recipes/data/models/recipe.dart';

@@ -1,12 +1,16 @@
-import 'package:recipes/data/models/ingredient.dart';
-import 'package:recipes/data/models/recipe.dart';
+import '../export.dart';
 
 abstract class Repository {
   List<Recipe> findAllRecipes();
   Recipe findRecipeById(int id);
   List<Ingredient> findAllIngredients();
   List<Ingredient> findRecipeIngredients(int recipeId);
-  // TODO: Add insert methods
-  // TODO: Add delete methods
-  // TODO: Add initializing and closing methods
+  int insertRecipe(Recipe recipe);
+  List<int> insertIngredients(List<Ingredient> ingredients);
+  void deleteRecipe(Recipe recipe);
+  void deleteIngredient(Ingredient ingredient);
+  void deleteIngredients(List<Ingredient> ingredients);
+  void deleteRecipeIngredients(int recipeId);
+  Future init();
+  void close();
 }

@@ -252,7 +252,16 @@ class _RecipeListState extends State<RecipeList> {
       onTap: () {
         Navigator.push(topLevelContext, MaterialPageRoute(
           builder: (context) {
-            return const RecipeDetails();
+            final detailRecipe = Recipe(
+              label: recipe.label,
+              image: recipe.image,
+              url: recipe.url,
+              calories: recipe.calories,
+              totalTime: recipe.totalTime,
+              totalWeight: recipe.totalWeight,
+            );
+            detailRecipe.ingredients = convertIngredients(recipe.ingredients);
+            return RecipeDetails(recipe: detailRecipe);
           },
         ));
       },
