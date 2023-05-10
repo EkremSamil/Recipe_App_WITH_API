@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:chopper/chopper.dart';
+import 'package:provider/provider.dart';
 
 import '../../export.dart';
 
@@ -176,9 +177,12 @@ class _RecipeListState extends State<RecipeList> {
     });
   }
 
+// Fake Service
+
   Widget _buildRecipeLoader(BuildContext context) {
     if (searchTextController.text.length < 3) {
-      return Container();
+      Provider.of<MockService>(context)
+          .queryRecipes(searchTextController.text.trim(), currentStartPosition, currentEndPosition);
     }
 
     return FutureBuilder<Response<Result<APIRecipeQuery>>>(
@@ -215,7 +219,6 @@ class _RecipeListState extends State<RecipeList> {
           return _buildRecipeList(context, currentSearchList);
         } else {
           if (currentCount == 0) {
-            // Show a loading indicator while waiting for the movies
             return const Center(
               child: CircularProgressIndicator(),
             );

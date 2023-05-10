@@ -22,3 +22,5 @@ export 'package:recipes/network/model_converter.dart';
 export 'package:recipes/data/models/ingredient.dart';
 export 'package:recipes/data/repository.dart';
 export 'package:recipes/data/models/recipe.dart';
+export 'package:recipes/mock_service/mock_service.dart';
+export 'package:recipes/data/memory_repository.dart';

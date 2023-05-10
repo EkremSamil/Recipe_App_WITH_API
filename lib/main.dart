@@ -1,5 +1,4 @@
 import 'package:provider/provider.dart';
-import 'package:recipes/data/memory_repository.dart';
 
 import 'export.dart';
 
@@ -21,9 +20,17 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider<MemoryRepository>(
-      lazy: false,
-      create: (_) => MemoryRepository(),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider<MemoryRepository>(
+          lazy: false,
+          create: (_) => MemoryRepository(),
+        ),
+        Provider(
+          create: (_) => MockService()..create(),
+          lazy: false,
+        ),
+      ],
       child: MaterialApp(
         title: 'Recipes',
         debugShowCheckedModeBanner: false,
