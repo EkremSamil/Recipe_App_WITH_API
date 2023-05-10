@@ -1,17 +1,8 @@
-import 'dart:convert';
 import 'dart:math';
 
 import 'package:chopper/chopper.dart';
-import 'package:flutter/material.dart';
-import 'package:recipes/network/model_response.dart';
-import '../widgets/custom_dropdown.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
-import '../../network/recipe_model.dart';
-import '../../network/recipe_service.dart';
-import '../widgets/recipe_card.dart';
-import '../recipes/recipe_details.dart';
-import '../../core/colors.dart';
+import '../../export.dart';
 
 class RecipeList extends StatefulWidget {
   const RecipeList({Key? key}) : super(key: key);

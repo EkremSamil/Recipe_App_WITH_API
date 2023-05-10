@@ -1,7 +1,4 @@
-import 'package:flutter/material.dart';
-
-import 'ui/main_screen.dart';
-import 'package:logging/logging.dart';
+import 'export.dart';
 
 Future<void> main() async {
   _setupLogging();

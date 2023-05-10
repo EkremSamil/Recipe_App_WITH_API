@@ -1,7 +1,6 @@
 import 'package:chopper/chopper.dart';
-import 'recipe_model.dart';
-import 'model_response.dart';
-import 'model_converter.dart';
+
+import '../export.dart';
 part 'recipe_service.chopper.dart';
 
 const String apiKey = '3422c51d9197653a1e7f57d3ed2d3a4e';

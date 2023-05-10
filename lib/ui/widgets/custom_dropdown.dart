@@ -1,18 +1,14 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import '../../export.dart';
 
 class CustomDropdownMenuItem<T> extends PopupMenuEntry<T> {
-  const CustomDropdownMenuItem(
-      {Key? key, required this.value, required this.text, this.callback})
-      : super(key: key);
+  const CustomDropdownMenuItem({Key? key, required this.value, required this.text, this.callback}) : super(key: key);
 
   final T value;
   final String text;
   final Function? callback;
 
   @override
-  State<CustomDropdownMenuItem<T>> createState() =>
-      _CustomDropdownMenuItemState<T>();
+  State<CustomDropdownMenuItem<T>> createState() => _CustomDropdownMenuItemState<T>();
 
   @override
   double get height => 32.0;
@@ -47,8 +43,7 @@ class _CustomDropdownMenuItemState<T> extends State<CustomDropdownMenuItem<T>> {
                     widget.callback!();
                   }
                 },
-                child: SvgPicture.asset('assets/images/dismiss.svg',
-                    color: Colors.grey, semanticsLabel: 'Back'),
+                child: SvgPicture.asset('assets/images/dismiss.svg', color: Colors.grey, semanticsLabel: 'Back'),
               ),
             ),
           ),

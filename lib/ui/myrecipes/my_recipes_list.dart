@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import '../../export.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 
 class MyRecipesList extends StatefulWidget {
